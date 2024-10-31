@@ -17,10 +17,10 @@ def number_of_letters_and_numbers(row):
     print(f"numbers_value{numbers_value}")
 
 if __name__ == '__main__':
-    row = []
+    _row = []
     while True:
         element = input("Fill up your row (enter to finish): ")
         if element == "":
             break
-        row.append(element)
-    number_of_letters_and_numbers(row)
+        _row.append(element)
+    number_of_letters_and_numbers(_row)
