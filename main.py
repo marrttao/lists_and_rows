@@ -1,11 +1,12 @@
 
-def number_of_word(row, word):
+def number_of_word(row, symbol):
     count = 0
-    word = word.lower()
+    symbol = symbol.lower()
     for i in range(len(row)):
-        if word in row[i].lower():
-            count += 1
-    print(f"{word} {count} times in the row")
+        for char in row[i].lower():
+            if char == symbol:
+                count += 1
+    print(f"{symbol} {count} times in the row")
 
 if __name__ == '__main__':
     _row = []
@@ -14,5 +15,5 @@ if __name__ == '__main__':
         if element == "":
             break
         _row.append(element)
-    _word = input("word you want to count: ")
-    number_of_word(_row, _word)
+    _symbol = input("symbol you want to count: ")[0]
+    number_of_word(_row, _symbol)
